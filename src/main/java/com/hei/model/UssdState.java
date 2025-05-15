@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class UssdState {
-  private List<String> path = new ArrayList<String>();
+  private List<String> path = new ArrayList<>();
   private TempData tempData = new TempData();
 
   public String getCurrentPath() {
