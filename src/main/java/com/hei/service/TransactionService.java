@@ -2,7 +2,9 @@ package com.hei.service;
 
 import com.hei.model.exception.InvalidAccountNumberException;
 import com.hei.model.exception.InvalidAmountException;
+import lombok.Getter;
 
+@Getter
 public class TransactionService {
 
   private double savingsBalance = 50_000;
@@ -24,11 +26,7 @@ public class TransactionService {
     return "1234".equals(password);
   }
 
-  public double getSavingsBalance() {
-    return savingsBalance;
-  }
-
-  private void validatePositiveAmount(double amount) {
+    private void validatePositiveAmount(double amount) {
     if (amount <= 0) {
       throw new InvalidAmountException("Le montant doit être positif.");
     }
