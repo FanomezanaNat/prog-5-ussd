@@ -1,6 +1,5 @@
 package com.hei.service;
 
-import com.hei.model.exception.InsufficientBalanceException;
 import com.hei.model.exception.InvalidAccountNumberException;
 import com.hei.model.exception.InvalidAmountException;
 
@@ -27,23 +26,6 @@ public class TransactionService {
 
   public double getSavingsBalance() {
     return savingsBalance;
-  }
-
-  public void depositSavings(double amount) {
-    validatePositiveAmount(amount);
-    savingsBalance += amount;
-    System.out.printf(
-        "Depot de %.2f Ar complete. Nouveau solde: %.2f Ar%n", amount, savingsBalance);
-  }
-
-  public void withdrawSavings(double amount) {
-    validatePositiveAmount(amount);
-    if (amount > savingsBalance) {
-      throw new InsufficientBalanceException("Solde insuffisante.");
-    }
-    savingsBalance -= amount;
-    System.out.printf(
-        "Retrait de %.2f Ar complete. Nouveau solde: %.2f Ar%n", amount, savingsBalance);
   }
 
   private void validatePositiveAmount(double amount) {
