@@ -26,7 +26,7 @@ public class TransactionService {
     return "1234".equals(password);
   }
 
-    private void validatePositiveAmount(double amount) {
+  private void validatePositiveAmount(double amount) {
     if (amount <= 0) {
       throw new InvalidAmountException("Le montant doit être positif.");
     }
