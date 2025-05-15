@@ -113,7 +113,12 @@ public class MenuService {
     menus.put(
         "1-2",
         new Menu(
-            "Crédit VIP:\n" + "1. 10000 Ar\n" + "2. 20000 Ar\n" + "3. 50000 Ar\n" + "0. Retour") {
+            """
+            Crédit VIP:
+            1. 10000 Ar
+            2. 20000 Ar
+            3. 50000 Ar
+            0. Retour""") {
           @Override
           public void handleInput(String input) {
             switch (input) {
