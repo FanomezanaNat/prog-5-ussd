@@ -24,9 +24,9 @@ public class MenuService {
         new Menu(
             """
             Menu Principal:
-            1. Acheter crédit
-            2. Transférer argent
-            3. Mvola
+            1. Acheter crédit ou Offre Yas
+            2. Transférer argent (vers toute destination)
+            3. Mvola Credit ou Epargne
             4. Retrait argent
             5. Voir solde
             6. Quitter""") {
@@ -57,10 +57,11 @@ public class MenuService {
         "1",
         new Menu(
             """
-            Acheter crédit:
-            1. Crédit Standard
-            2. Crédit VIP
-            3. Forfaits
+            ACHETER CREDIT OU OFFRE YAS:
+            1. Crédit pour mon numéro
+            2. Crédit pour autre numéro
+            3. Offre pour mon numéro
+            4. Offre pour autre numéro
             0. Retour""") {
           @Override
           public void handleInput(String input) {
@@ -84,10 +85,10 @@ public class MenuService {
         "1-1",
         new Menu(
             """
-            Crédit Standard:
-            1. 1000 Ar
-            2. 2000 Ar
-            3. 5000 Ar
+            Crédit pour mon numéro:
+            1. Sans numéro
+            2. Mvola Epargne
+            3. Rembourser une Avance
             0. Retour""") {
           @Override
           public void handleInput(String input) {
@@ -114,10 +115,9 @@ public class MenuService {
         "1-2",
         new Menu(
             """
-            Crédit VIP:
-            1. 10000 Ar
-            2. 20000 Ar
-            3. 50000 Ar
+            Crédit à envoyer:
+            1. Recharger directement
+            2. Code de recharge
             0. Retour""") {
           @Override
           public void handleInput(String input) {
@@ -144,10 +144,11 @@ public class MenuService {
         "1-3",
         new Menu(
             """
-            Forfaits:
-            1. Internet - 1000 Ar
-            2. Appels - 1500 Ar
-            3. SMS - 500 Ar
+            ACHETER CREDIT OU OFFRE YAS:
+            1. Crédit pour mon numéro
+            2. Crédit pour autre numéro
+            3. Offre pour mon numéro
+            4. Offre pour autre numéro
             0. Retour""") {
           @Override
           public void handleInput(String input) {
